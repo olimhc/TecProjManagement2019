@@ -1,0 +1,149 @@
+= Clothes Database - Developer Guide
+:toc:
+:toc-title:
+:toc-placement: preamble
+:sectnums:
+:imagesDir: images
+:stylesDir: stylesheets
+:xrefstyle: full
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+endif::[]
+:repoURL: https://github.com/olimhc/TecProjManagment19
+
+== Product Scope
+
+*Target user profile:
+* Retailers that are still using traditional bookkeeping methods (eg: handwritten books) and those who wish to sell their clothing online
+
+
+*Value proposition:
+* This is targeted at small clothing stores doing e-commerce or managing a large amount of clothing inventory
+* This application is targeted at store operators to ease their jobs on the management of stocks within the store.
+* This application should intuitive and easy to operate even by someone with zero programming knowledge.
+
+== Design
+
+[[Design-Architecture]]
+=== Architecture
+image::ER_Diagram.png[width="800"]
+
+[[Design-Ui]]
+=== UI component
+
+[[Design-Logic]]
+=== Logic component
+
+
+
+[appendix]
+== User Stories
+
+Priorities: High (must have) - `* * \*`, Medium (nice to have) - `* \*`, Low (unlikely to have) - `*`
+
+[width="59%",cols="22%,<23%,<25%,<30%",options="header",]
+|=======================================================================
+|Priority |As a ... |I want to ... |So that I can...
+|`* * *` |new user |see usage instructions |refer to instructions when I forget how to use the App
+|`* * *` |shop owner |to store information of their clothing |so that it can be stored
+|`* * *` |shop owner |to add or remove clothing |so that they can update their stock
+|`* * *` |shop owner |search for their clothing |so that they can retrieve information about it
+|`* * *` |shop owner |categorise their clothing |so that they can better arrange their products
+|=======================================================================
+
+
+[appendix]
+== Use Cases
+
+[discrete]
+=== Use case: Uploading a clothing information
+
+*MSS*
+1. Client request to upload a clothing information
+2. Platform display a list of fields for client to fill in (Description, colour, cost, size, image)
+3. Client clicks upload
+4. Platform returns a successful upload message
+
+*Extensions*
+* 2a. Empty fields.
++
+[none]
+
+** 2a1. The platform will prompt the client that there are empty fields
+** 2a2. Client click confirm
++
+Use case resume at step 4
+[none]
+
+* 2b. Client click back
++
+Use case resume at step 2
+
+[discrete]
+=== Use case: Customer purchasing a clothing
+
+*MSS*
+1. Customer click purchase on a specific clothing
+2. Platform returns a page containing options for size and colors
+3. Customer selects size and colours
+4. Platform returns a page containing payment details and delivery options
+5. Customer enters the required information and confirm payment
+6. Platform returns a confirmation page
+
+*Extensions*
+* 5a. Invalid fields
++
+[none]
+** 5a1. Platform prompt customer that certain fields are invalid
+** 5a2. Customers reenter with valid fields
++
+Use case resume at step 6
+[discrete]
+
+[appendix]
+== Non Functional Requirements
+
+.  Should be able to hold up to 5000 data of clothing without a noticeable sluggishness in performance for typical usage.
+.  Database should be able execute any retrieve information within 3 seconds.
+.  Database should have an auto-save function whenever something is added
+.  Database format should be downloadable
+
+[appendix]
+
+[appendix]
+== Product Survey
+
+*Product Name*
+
+Author: ...
+
+Pros:
+
+* Ease of use.
+* Low price, affordable for customer.
+* Increase efficiency for the customer.
+* Better organisation.
+
+Cons:
+
+* This platform is not integrable unless specified.
+* This platform is made for small clothing business and would not be able to handle large amount of traffic at one go.
+
+[appendix]
+
+== Milestones
+
+
+
+== Technical requirements
+The project will work using Amazon Web Services (EC2 and S3) for the storage of content and would be backed up in a local server if the client wishes to do so. In that case, a server will be needed and also one extra computer for management. Out of it, there are needed 5 personal computers to manage the program on a daily basis by the shop employees.
+
+
+== Limits and Exclusions
+This project is exclusively only catered for clothing stores who wish to list their clothes online. This platform is not suitable for any other product forms and is not integrable with other platforms unless otherwise specified. It’s also important to note that scope of usage of this platform is as defined in the project scope.
+
+
+== Review with customers
+The customer review will be measured after the first release. It is intended to survey the client periodically to identify the strengths and user satisfaction.
+After that, we could escalate the project to an online software store to deploy it to any store model, but that would be in a second stage of our software company.
