@@ -1,0 +1,5 @@
+= Clothing Database
+ifdef::env-github,env-browser[:relfileprefix: docs/]
+
+* This is a clothing database specifically targeted at aiding retailers to upgrade from their traditional bookkeeping methods (eg: handwritten books)
+* Retailers who wish to sell their clothing online
