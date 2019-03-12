@@ -27,7 +27,7 @@ endif::[]
 
 [[Design-Architecture]]
 === Architecture
-image::ER_Diagram.png[width="800"]
+image::ER_Diagram.PNG[width="800"]
 
 [[Design-Ui]]
 === UI component
